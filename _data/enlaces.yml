@@ -36,12 +36,13 @@ lema: Temas propios desde Alcorcón
 
 enlaces:
 
+  - titulo: Born in These Days
+    url: https://song.link/s/195wDP025XEOS2abZb0W9i
+    subtitulo: Escúchalo en todas las plataformas
+    destacado: true
+
   - titulo: Spotify
     url: https://open.spotify.com/artist/1KfjduIv7QM1g0zOubQ732
-
-  - titulo: Todas las plataformas
-    url: https://song.link/s/195wDP025XEOS2abZb0W9i
-    subtitulo: Escúchanos en tu app favorita
 
   - titulo: YouTube
     url: https://www.youtube.com/channel/UCCaYKFG2QDO1FB8pR_iFxCA
