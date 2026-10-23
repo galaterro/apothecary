@@ -15,16 +15,19 @@
 
 /* ─── Colores y medidas ─── */
 
+/* Paleta: https://coolors.co/143109-aaae7f-d0d6b3-f7f7f7-efefef */
 :root {
-  --fondo: #0c1a13;
-  --fondo-luz: #1f3d2d;
-  --fondo-hondo: #07100b;
-  --pergamino: #ebe3cc;
-  --salvia: #a9b49f;
-  --laton: #b9a36a;
-  --laton-tenue: rgba(185, 163, 106, 0.4);
-  --laton-velo: rgba(185, 163, 106, 0.13);
-  --boton: rgba(235, 227, 204, 0.035);
+  --fondo: #143109;
+  --fondo-luz: #1d4211;
+  --fondo-hondo: #0a1c04;
+  --claro: #f7f7f7;
+  --claro-2: #efefef;
+  --salvia: #d0d6b3;
+  --oliva: #aaae7f;
+  --oliva-tenue: rgba(170, 174, 127, 0.45);
+  --oliva-velo: rgba(170, 174, 127, 0.14);
+  --boton: rgba(247, 247, 247, 0.04);
+  --texto-destacado: #2e4224;
 
   --serif-versalitas: "IM Fell English SC", "Iowan Old Style", Georgia, serif;
   --serif-cursiva: "IM Fell English", "Iowan Old Style", Georgia, serif;
@@ -43,7 +46,7 @@
 
 html {
   background: var(--fondo);
-  color: var(--pergamino);
+  color: var(--claro);
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -70,15 +73,15 @@ body::after {
 
 body::before {
   background:
-    radial-gradient(ellipse 90% 55% at 50% 22%, var(--fondo-luz) 0%, rgba(31, 61, 45, 0) 100%),
-    radial-gradient(ellipse 140% 100% at 50% 40%, rgba(7, 16, 11, 0) 55%, var(--fondo-hondo) 100%),
+    radial-gradient(ellipse 90% 55% at 50% 22%, var(--fondo-luz) 0%, rgba(29, 66, 17, 0) 100%),
+    radial-gradient(ellipse 140% 100% at 50% 40%, rgba(10, 28, 4, 0) 55%, var(--fondo-hondo) 100%),
     var(--fondo);
 }
 
 /* Grano de papel */
 body::after {
   opacity: 0.07;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .92 0 0 0 0 .89 0 0 0 0 .8 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .97 0 0 0 0 .97 0 0 0 0 .97 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* ─── Estructura ─── */
@@ -130,7 +133,7 @@ body::after {
   gap: 0.7rem;
   width: min(13rem, 60%);
   margin: 1.4rem auto 0;
-  color: var(--laton);
+  color: var(--oliva);
 }
 
 .ornamento::before,
@@ -168,14 +171,14 @@ body::after {
   align-items: center;
   min-height: 3.75rem;
   padding: 0.65rem 0.5rem;
-  border: 1px solid var(--laton-tenue);
+  border: 1px solid var(--oliva-tenue);
   border-radius: 3px;
   /* Doble filete, como las etiquetas de los frascos de botica */
   box-shadow:
     inset 0 0 0 3px var(--fondo),
-    inset 0 0 0 4px var(--laton-velo);
+    inset 0 0 0 4px var(--oliva-velo);
   background: var(--boton);
-  color: var(--pergamino);
+  color: var(--claro);
   text-decoration: none;
   transition:
     background-color 0.25s ease,
@@ -188,7 +191,7 @@ body::after {
   justify-self: center;
   width: 1.4rem;
   height: 1.4rem;
-  color: var(--laton);
+  color: var(--oliva);
   transition: color 0.25s ease;
 }
 
@@ -221,19 +224,19 @@ body::after {
   justify-self: center;
   width: 1rem;
   height: 1rem;
-  color: var(--laton-tenue);
+  color: var(--oliva-tenue);
   transition: color 0.25s ease, transform 0.25s ease;
 }
 
 @media (hover: hover) {
   .enlace:hover {
-    border-color: var(--laton);
-    background-color: var(--laton-velo);
+    border-color: var(--oliva);
+    background-color: var(--oliva-velo);
   }
 
   .enlace:hover .enlace__icono,
   .enlace:hover .enlace__flecha {
-    color: var(--pergamino);
+    color: var(--claro);
   }
 
   .enlace:hover .enlace__flecha {
@@ -247,17 +250,17 @@ body::after {
 
 .enlace:focus-visible,
 .compartir:focus-visible {
-  outline: 2px solid var(--pergamino);
+  outline: 2px solid var(--claro);
   outline-offset: 3px;
 }
 
 /* Botón resaltado (destacado: true) */
 .enlace--destacado {
-  border-color: var(--laton);
+  border-color: var(--oliva);
   box-shadow:
-    inset 0 0 0 3px var(--pergamino),
-    inset 0 0 0 4px var(--laton);
-  background: var(--pergamino);
+    inset 0 0 0 3px var(--salvia),
+    inset 0 0 0 4px var(--oliva);
+  background: var(--salvia);
   color: var(--fondo);
 }
 
@@ -267,12 +270,15 @@ body::after {
 }
 
 .enlace--destacado .enlace__subtitulo {
-  color: #3c4d40;
+  color: var(--texto-destacado);
 }
 
 @media (hover: hover) {
   .enlace--destacado:hover {
-    background-color: #f6f0de;
+    box-shadow:
+      inset 0 0 0 3px var(--claro-2),
+      inset 0 0 0 4px var(--oliva);
+    background-color: var(--claro-2);
   }
 
   .enlace--destacado:hover .enlace__icono,
@@ -327,8 +333,8 @@ body::after {
 
 @media (hover: hover) {
   .compartir:hover {
-    border-color: var(--laton-tenue);
-    color: var(--pergamino);
+    border-color: var(--oliva-tenue);
+    color: var(--claro);
   }
 }
 
