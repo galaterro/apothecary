@@ -36,6 +36,9 @@ lema: Temas propios desde Alcorcón
 
 enlaces:
 
+  - titulo: Spotify
+    url: https://open.spotify.com/track/195wDP025XEOS2abZb0W9i
+
   - titulo: YouTube
     url: https://www.youtube.com/channel/UCCaYKFG2QDO1FB8pR_iFxCA
     subtitulo: Canal oficial
@@ -45,9 +48,6 @@ enlaces:
     subtitulo: "@apothecaryrocknroll"
 
   # ── Ejemplos listos para usar: quita los "# " y cambia la url ──────────
-
-  # - titulo: Spotify
-  #   url: https://open.spotify.com/artist/TU_ARTISTA
 
   # - titulo: TikTok
   #   url: https://www.tiktok.com/@TU_USUARIO
