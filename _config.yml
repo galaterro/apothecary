@@ -1,0 +1,15 @@
+# Configuración técnica de la web.
+# Para cambiar los enlaces NO es aquí: edita _data/enlaces.yml
+
+title: Apothecary
+description: >-
+  Apothecary, banda de temas propios de Alcorcón.
+  Escúchanos y síguenos: todos nuestros enlaces en un solo sitio.
+
+# GitHub Pages rellena "url" y "baseurl" automáticamente (también si algún
+# día se le pone un dominio propio), así que no hace falta escribirlos.
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

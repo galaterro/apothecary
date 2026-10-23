@@ -1,0 +1,61 @@
+# ═══════════════════════════════════════════════════════════════════════
+#  ENLACES DE LA WEB DE APOTHECARY
+# ═══════════════════════════════════════════════════════════════════════
+#
+#  Este es el ÚNICO archivo que hay que tocar para cambiar la web.
+#  Los botones salen en el mismo orden en que están escritos aquí abajo.
+#
+#  Cada enlace es un bloque que empieza por un guion (-):
+#
+#    - titulo: Spotify                      ← texto del botón
+#      url: https://open.spotify.com/...    ← adónde lleva
+#      subtitulo: Nuestro primer EP         ← (opcional) texto pequeño debajo
+#      destacado: true                      ← (opcional) botón resaltado, p. ej. un estreno
+#      icono: entradas                      ← (opcional) normalmente se elige solo
+#
+#  Para no romper nada:
+#    · Respeta los espacios del principio de cada línea. "titulo" va justo
+#      después del guion y las demás líneas del bloque, alineadas con él.
+#    · Si un texto lleva dos puntos (:) o empieza por un símbolo,
+#      ponlo entre comillas:   subtitulo: "Directo: Sala Live, Madrid"
+#    · Para ocultar un enlace sin borrarlo, pon "# " al principio de sus
+#      líneas. Para volver a mostrarlo, quita el "# " (almohadilla y espacio).
+#
+#  El icono se elige solo según la web del enlace (YouTube, Instagram,
+#  Spotify, TikTok, Bandcamp, Apple Music, SoundCloud, WhatsApp, webs de
+#  entradas...). Para forzar uno, añade "icono:" con alguno de estos:
+#    entradas, conciertos, tienda, correo, web, musica, enlace
+#
+#  Para un correo basta con poner la dirección:   url: apothecary@gmail.com
+#
+#  Tras guardar ("Commit changes"), la web se actualiza sola en 1-2 minutos.
+# ═══════════════════════════════════════════════════════════════════════
+
+# Frase corta que sale debajo del logo
+lema: Temas propios desde Alcorcón
+
+enlaces:
+
+  - titulo: YouTube
+    url: https://www.youtube.com/channel/UCCaYKFG2QDO1FB8pR_iFxCA
+    subtitulo: Canal oficial
+
+  # ── Ejemplos listos para usar: quita los "# " y cambia la url ──────────
+
+  # - titulo: Instagram
+  #   url: https://www.instagram.com/TU_USUARIO
+
+  # - titulo: Spotify
+  #   url: https://open.spotify.com/artist/TU_ARTISTA
+
+  # - titulo: TikTok
+  #   url: https://www.tiktok.com/@TU_USUARIO
+
+  # - titulo: Próximo concierto
+  #   subtitulo: "Sábado 15 de noviembre · Sala X, Madrid"
+  #   url: https://LA_WEB_DE_ENTRADAS
+  #   icono: entradas
+  #   destacado: true
+
+  # - titulo: Contacto
+  #   url: TU_CORREO@gmail.com

@@ -1,0 +1,52 @@
+{%- comment -%}
+  Pinta un botón de la lista. Recibe include.enlace (titulo, url y, opcionales,
+  subtitulo, icono y destacado) e include.indice para escalonar la animación.
+  Ojo: en Jekyll las variables de un include se conservan entre llamadas, por
+  eso todas se asignan de nuevo al principio.
+{%- endcomment -%}
+{%- assign enlace = include.enlace -%}
+{%- assign url = enlace.url | strip -%}
+{%- assign es_correo = false -%}
+
+{%- comment -%} Arregla urls escritas sin "https://" y correos sueltos {%- endcomment -%}
+{%- unless url contains "://" or url contains "mailto:" or url contains "tel:" -%}
+  {%- if url contains "@" -%}
+    {%- unless url contains "/" -%}{%- assign es_correo = true -%}{%- endunless -%}
+  {%- endif -%}
+  {%- if es_correo -%}
+    {%- assign url = url | prepend: "mailto:" -%}
+  {%- else -%}
+    {%- assign url = url | prepend: "https://" -%}
+  {%- endif -%}
+{%- endunless -%}
+
+{%- comment -%} Elige el icono: el indicado o el que encaje con la url {%- endcomment -%}
+{%- assign icono = enlace.icono | default: "" | strip | downcase -%}
+{%- if icono == "" -%}
+  {%- assign url_min = url | downcase -%}
+  {%- assign icono = "enlace" -%}
+  {%- if url_min contains "mailto:" -%}{%- assign icono = "correo" -%}{%- endif -%}
+  {%- for par in site.data.iconos -%}
+    {%- for dominio in par[1].dominios -%}
+      {%- assign tras_barras = "//" | append: dominio -%}
+      {%- assign tras_punto = "." | append: dominio -%}
+      {%- if url_min contains tras_barras or url_min contains tras_punto -%}
+        {%- assign icono = par[0] -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- assign svg = site.data.iconos[icono].svg | default: site.data.iconos.enlace.svg -%}
+
+<li class="enlaces__item" style="--i: {{ include.indice }}">
+  <a class="enlace{% if enlace.destacado %} enlace--destacado{% endif %}" href="{{ url | escape }}">
+    <svg class="enlace__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false">{{ svg }}</svg>
+    <span class="enlace__texto">
+      <span class="enlace__titulo">{{ enlace.titulo | escape }}</span>
+      {%- if enlace.subtitulo %}
+      <span class="enlace__subtitulo">{{ enlace.subtitulo | escape }}</span>
+      {%- endif %}
+    </span>
+    <svg class="enlace__flecha" viewBox="0 0 24 24" aria-hidden="true" focusable="false">{{ site.data.iconos.flecha.svg }}</svg>
+  </a>
+</li>
