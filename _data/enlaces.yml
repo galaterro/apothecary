@@ -36,10 +36,14 @@ lema:
 
 enlaces:
 
+  - titulo: Shadows on My Mind
+    url: https://song.link/s/7Fmlwgix7NrTO93BOtM48U
+    subtitulo: Escúchalo en todas las plataformas
+    destacado: true
+
   - titulo: Born in These Days
     url: https://song.link/s/195wDP025XEOS2abZb0W9i
     subtitulo: Escúchalo en todas las plataformas
-    destacado: true
 
   - titulo: Spotify
     url: https://open.spotify.com/artist/1KfjduIv7QM1g0zOubQ732
